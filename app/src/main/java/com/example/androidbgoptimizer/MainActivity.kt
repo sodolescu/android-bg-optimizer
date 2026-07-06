@@ -465,7 +465,7 @@ fun SegmentCard(label: String, used: Int, capacity: Int, color: Color, count: In
                 Text("$used / $capacity MB", fontSize = 9.sp, color = Color(0xFF8B92A9), fontFamily = FontFamily.Monospace)
             }
             LinearProgressIndicator(
-                progress = { (used.toFloat() / capacity).coerceIn(0f, 1f) },
+                progress = (used.toFloat() / capacity).coerceIn(0f, 1f),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(6.dp)
